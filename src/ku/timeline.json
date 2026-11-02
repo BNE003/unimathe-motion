@@ -1,0 +1,520 @@
+{
+  "total": 101.2,
+  "voice": "voice/ku-take2.mp3",
+  "music": "music-ku.wav",
+  "voiceGaps": [
+    [
+      59.1,
+      1.0
+    ],
+    [
+      63.6,
+      0.5
+    ],
+    [
+      66.1,
+      0.7
+    ],
+    [
+      70.3,
+      0.7
+    ],
+    [
+      79.5,
+      0.6
+    ],
+    [
+      80.43,
+      0.6
+    ],
+    [
+      83.8,
+      0.5
+    ]
+  ],
+  "scenes": {
+    "S1": {
+      "from": 0,
+      "dur": 8.6
+    },
+    "S2": {
+      "from": 8.6,
+      "dur": 18.2
+    },
+    "S3": {
+      "from": 26.8,
+      "dur": 7.4
+    },
+    "S4": {
+      "from": 34.2,
+      "dur": 11.0
+    },
+    "S5": {
+      "from": 45.2,
+      "dur": 28.1
+    },
+    "S6": {
+      "from": 73.3,
+      "dur": 15.1
+    },
+    "S7": {
+      "from": 88.4,
+      "dur": 5.0
+    },
+    "S8": {
+      "from": 93.4,
+      "dur": 4.4
+    },
+    "S9": {
+      "from": 97.8,
+      "dur": 3.4
+    }
+  },
+  "cues": {
+    "S1": {
+      "drei": 6.3,
+      "move": 7.6
+    },
+    "S2": {
+      "was": 0.5,
+      "punkte": 2.74,
+      "beispiel": 7.8,
+      "calc": 10.46,
+      "passt": 13.02,
+      "ebene": 14.58,
+      "flaeche": 16.6
+    },
+    "S3": {
+      "drei": 0.48,
+      "null": 4.04,
+      "summe": 5.14,
+      "vielf": 6.06
+    },
+    "S4": {
+      "erstens": 0.4,
+      "nullv": 1.28,
+      "setz": 3.14,
+      "calc1": 4.28,
+      "calc2": 6.22,
+      "passt": 8.06,
+      "liegt": 8.86
+    },
+    "S5": {
+      "zweitens": 0.42,
+      "wichtig": 2.22,
+      "nimm": 4.7,
+      "gegeben": 8.36,
+      "zuzeigen": 10.6,
+      "uplusv": 11.6,
+      "sortier": 15.48,
+      "allesv": 17.86,
+      "einsetzen": 20.42,
+      "ausklammern": 23.58,
+      "rechte": 25.64
+    },
+    "S6": {
+      "drittens": 0.44,
+      "muster": 2.5,
+      "zuzeigen": 4.14,
+      "gleichung": 5.08,
+      "ausklammern": 7.9,
+      "einsetzen": 9.84,
+      "umstellen": 11.32,
+      "wieder": 12.6
+    },
+    "S7": {
+      "alle": 0.46,
+      "uvr": 2.62
+    },
+    "S8": {
+      "mehr": 0.44,
+      "schritt": 2.1,
+      "unimathe": 3.7
+    },
+    "S9": {
+      "verstehen": 1.0,
+      "loesen": 1.3,
+      "pill": 0.44
+    }
+  },
+  "sfx": [
+    [
+      "S1",
+      0.0,
+      "swell",
+      0.6
+    ],
+    [
+      "S1",
+      6.3,
+      "tick",
+      0.45
+    ],
+    [
+      "S1",
+      6.5,
+      "tick",
+      0.45
+    ],
+    [
+      "S1",
+      6.7,
+      "tick",
+      0.45
+    ],
+    [
+      "S1",
+      7.6,
+      "whoosh",
+      0.4
+    ],
+    [
+      "S2",
+      7.8,
+      "click",
+      0.5
+    ],
+    [
+      "S2",
+      13.02,
+      "lock",
+      0.65
+    ],
+    [
+      "S2",
+      15.0,
+      "rise",
+      0.35
+    ],
+    [
+      "S3",
+      4.04,
+      "tick",
+      0.5
+    ],
+    [
+      "S3",
+      5.14,
+      "tick",
+      0.5
+    ],
+    [
+      "S3",
+      6.06,
+      "tick",
+      0.5
+    ],
+    [
+      "S4",
+      0.4,
+      "whoosh",
+      0.35
+    ],
+    [
+      "S4",
+      4.28,
+      "click",
+      0.45
+    ],
+    [
+      "S4",
+      6.22,
+      "click",
+      0.45
+    ],
+    [
+      "S4",
+      8.06,
+      "lock",
+      0.7
+    ],
+    [
+      "S5",
+      0.42,
+      "whoosh",
+      0.35
+    ],
+    [
+      "S5",
+      8.36,
+      "click",
+      0.45
+    ],
+    [
+      "S5",
+      10.6,
+      "tick",
+      0.5
+    ],
+    [
+      "S5",
+      15.48,
+      "click",
+      0.45
+    ],
+    [
+      "S5",
+      17.86,
+      "click",
+      0.45
+    ],
+    [
+      "S5",
+      20.42,
+      "click",
+      0.45
+    ],
+    [
+      "S5",
+      23.58,
+      "click",
+      0.45
+    ],
+    [
+      "S5",
+      25.64,
+      "lock",
+      0.75
+    ],
+    [
+      "S6",
+      0.44,
+      "whoosh",
+      0.35
+    ],
+    [
+      "S6",
+      7.9,
+      "click",
+      0.45
+    ],
+    [
+      "S6",
+      9.84,
+      "click",
+      0.45
+    ],
+    [
+      "S6",
+      11.32,
+      "click",
+      0.45
+    ],
+    [
+      "S6",
+      12.6,
+      "lock",
+      0.7
+    ],
+    [
+      "S7",
+      0.46,
+      "accent_small",
+      0.6
+    ],
+    [
+      "S7",
+      2.62,
+      "rise",
+      0.35
+    ],
+    [
+      "S8",
+      0.0,
+      "whoosh",
+      0.5
+    ],
+    [
+      "S8",
+      2.1,
+      "tick",
+      0.45
+    ],
+    [
+      "S8",
+      2.5,
+      "tick",
+      0.45
+    ],
+    [
+      "S8",
+      2.9,
+      "tick",
+      0.45
+    ],
+    [
+      "S9",
+      0.0,
+      "whoosh",
+      0.55
+    ],
+    [
+      "S9",
+      0.64,
+      "accent",
+      0.8
+    ]
+  ],
+  "arrangement": {
+    "pulse": [
+      [
+        0.0,
+        8.6
+      ],
+      [
+        88.4,
+        97.8
+      ]
+    ],
+    "hats": [],
+    "arp": [
+      [
+        88.4,
+        97.8
+      ]
+    ],
+    "quiet": [
+      0,
+      0
+    ],
+    "end": 97.8,
+    "gridReset": 88.4
+  },
+  "subtitles": [
+    [
+      0.0,
+      3.9,
+      "Typische Klausuraufgabe: Ist U ein Untervektorraum?"
+    ],
+    [
+      5.42,
+      7.3,
+      "Ich zeig dir die Lösung in drei Schritten."
+    ],
+    [
+      9.1,
+      10.18,
+      "Was bedeutet U?"
+    ],
+    [
+      11.34,
+      15.26,
+      "Alle Punkte, bei denen x + y genau 2z ergibt."
+    ],
+    [
+      16.4,
+      18.58,
+      "Zum Beispiel (1, 1, 1):"
+    ],
+    [
+      19.06,
+      21.94,
+      "1 + 1 = 2 · 1. Passt."
+    ],
+    [
+      23.18,
+      25.9,
+      "Alle passenden Punkte bilden zusammen eine Ebene."
+    ],
+    [
+      27.28,
+      29.9,
+      "Für einen Untervektorraum prüfst du drei Bedingungen:"
+    ],
+    [
+      30.84,
+      33.5,
+      "Nullvektor, Summe, Vielfaches."
+    ],
+    [
+      34.6,
+      36.26,
+      "Erstens: der Nullvektor."
+    ],
+    [
+      37.34,
+      41.44,
+      "Setz ihn ein: 0 + 0 ist 0, 2 · 0 auch."
+    ],
+    [
+      42.26,
+      44.48,
+      "Passt. Der Nullvektor liegt in U."
+    ],
+    [
+      45.62,
+      48.84,
+      "Zweitens: die Summe. Das ist der wichtigste Schritt."
+    ],
+    [
+      49.9,
+      53.06,
+      "Nimm zwei beliebige Vektoren u und v aus U."
+    ],
+    [
+      53.56,
+      54.86,
+      "Für beide gilt die Gleichung."
+    ],
+    [
+      55.8,
+      58.6,
+      "Zu zeigen: Sie gilt auch für u + v."
+    ],
+    [
+      59.68,
+      63.16,
+      "Sortier links um: alles von u, dann alles von v."
+    ],
+    [
+      64.12,
+      65.64,
+      "Jetzt die Gleichungen einsetzen."
+    ],
+    [
+      66.58,
+      67.48,
+      "Zwei ausklammern."
+    ],
+    [
+      67.94,
+      69.82,
+      "Fertig: genau die rechte Seite."
+    ],
+    [
+      70.84,
+      73.64,
+      "Drittens: das Vielfache. Gleiches Muster."
+    ],
+    [
+      74.54,
+      77.44,
+      "Zu zeigen: Die Gleichung gilt für λ · u."
+    ],
+    [
+      78.3,
+      81.04,
+      "λ ausklammern, einsetzen, umstellen."
+    ],
+    [
+      81.8,
+      83.4,
+      "Wieder genau die rechte Seite."
+    ],
+    [
+      84.26,
+      85.78,
+      "Alle drei Bedingungen erfüllt."
+    ],
+    [
+      86.42,
+      88.16,
+      "U ist ein Untervektorraum."
+    ],
+    [
+      89.24,
+      93.12,
+      "Mehr Klausuraufgaben, Schritt für Schritt erklärt, findest du in UniMathe."
+    ]
+  ]
+}

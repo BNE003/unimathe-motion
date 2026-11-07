@@ -7,12 +7,16 @@ import {VideoVR, VRProps} from './vr/Video';
 import {TOTAL as TOTAL_VR} from './vr/timeline';
 import {KUProps, VideoKU} from './ku/Video';
 import {TOTAL as TOTAL_KU} from './ku/timeline';
+import {ERProps, VideoER} from './er/Video';
+import {TOTAL as TOTAL_ER} from './er/timeline';
 
 const base = {component: Video, durationInFrames: Math.round(TOTAL * FPS), fps: FPS, width: W, height: H};
 
 const baseVR = {component: VideoVR, durationInFrames: Math.round(TOTAL_VR * FPS), fps: FPS, width: W, height: H};
 
 const baseKU = {component: VideoKU, durationInFrames: Math.round(TOTAL_KU * FPS), fps: FPS, width: W, height: H};
+
+const baseER = {component: VideoER, durationInFrames: Math.round(TOTAL_ER * FPS), fps: FPS, width: W, height: H};
 
 export const Root: React.FC = () => (
   <>
@@ -22,5 +26,7 @@ export const Root: React.FC = () => (
     <Composition id="Vektorraeume-ohneMusik" {...baseVR} defaultProps={{music: false, voice: true} as VRProps} />
     <Composition id="Klausur-Unterraum" {...baseKU} defaultProps={{music: true, voice: true} as KUProps} />
     <Composition id="Klausur-Unterraum-ohneMusik" {...baseKU} defaultProps={{music: false, voice: true} as KUProps} />
+    <Composition id="Dominante-Eigenrichtung" {...baseER} defaultProps={{music: true, voice: true} as ERProps} />
+    <Composition id="Dominante-Eigenrichtung-ohneMusik" {...baseER} defaultProps={{music: false, voice: true} as ERProps} />
   </>
 );

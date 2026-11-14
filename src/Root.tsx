@@ -9,6 +9,8 @@ import {KUProps, VideoKU} from './ku/Video';
 import {TOTAL as TOTAL_KU} from './ku/timeline';
 import {KIProps, VideoKI} from './ki/Video';
 import {TOTAL as TOTAL_KI} from './ki/timeline';
+import {INVProps, VideoINV} from './inv/Video';
+import {TOTAL as TOTAL_INV} from './inv/timeline';
 
 const base = {component: Video, durationInFrames: Math.round(TOTAL * FPS), fps: FPS, width: W, height: H};
 
@@ -17,6 +19,8 @@ const baseVR = {component: VideoVR, durationInFrames: Math.round(TOTAL_VR * FPS)
 const baseKU = {component: VideoKU, durationInFrames: Math.round(TOTAL_KU * FPS), fps: FPS, width: W, height: H};
 
 const baseKI = {component: VideoKI, durationInFrames: Math.round(TOTAL_KI * FPS), fps: FPS, width: W, height: H};
+
+const baseINV = {component: VideoINV, durationInFrames: Math.round(TOTAL_INV * FPS), fps: FPS, width: W, height: H};
 
 export const Root: React.FC = () => (
   <>
@@ -28,5 +32,7 @@ export const Root: React.FC = () => (
     <Composition id="Klausur-Unterraum-ohneMusik" {...baseKU} defaultProps={{music: false, voice: true} as KUProps} />
     <Composition id="Klausur-Invertierbar" {...baseKI} defaultProps={{music: true, voice: true} as KIProps} />
     <Composition id="Klausur-Invertierbar-ohneMusik" {...baseKI} defaultProps={{music: false, voice: true} as KIProps} />
+    <Composition id="Klausur-Inverse" {...baseINV} defaultProps={{music: true, voice: true} as INVProps} />
+    <Composition id="Klausur-Inverse-ohneMusik" {...baseINV} defaultProps={{music: false, voice: true} as INVProps} />
   </>
 );

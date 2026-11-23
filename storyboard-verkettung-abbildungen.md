@@ -2,10 +2,37 @@
 
 ## Status
 
-- v1 gebaut am 2026-11-23 in `src/vk/` (96,5 s), Branch `video/verkettung-abbildungen`.
-- Feedback 2026-11-23: gefällt nicht. „Man versteht nicht, wo die Werte herkommen, allgemein unverständlich.“ Vorerst so committet, nicht veröffentlicht.
-- Stimme: Chris, eleven_v4, 1 Take, 1.335 Credits (96,6 s roh, 46 Abschnitte).
-- Im Stimmtext steht „Eff“, „G“, „iks“, „Teil A/B/C“.
+- **v1** (2026-11-23, 96,5 s, Commit f60e3a1) abgelehnt.
+  - Werte ohne sichtbare Rechnung.
+  - Maschinen-Kästen sahen nach KI aus.
+  - Graph-Verformung unverständlich.
+  - Abgehackte Sätze „Nicht injektiv. Nicht surjektiv.“
+- **v2** (2026-11-23, 97,1 s), neue Stimme vk-take2.mp3 (1.376 Credits, 96,4 s roh, 41 Abschnitte). Die Sätze mit x kommen aus vk-take3-x.mp3 (404 Credits, „X“ statt „iks“, das wie „ix“ klang). Fazit des Nutzers: auch v2 zu durcheinander. Ohne Abnahme committet.
+  - Keine Kästen. Die Rechnung steht Zeile für Zeile am Gleichheitszeichen ausgerichtet, Ergebnisse sind doppelt unterstrichen.
+  - Jedes Einsetzen ist sichtbar, zum Beispiel f(x²) = 2x² + 3 und g(2x+3) = (2x+3)².
+  - Ausmultiplizieren „jeder mit jedem“ mit vier Bögen.
+  - Teil b mit je einem Graphen und gerechneten Werten.
+  - Sprechtext in ganzen Sätzen.
+
+## v2: Ablauf
+
+| Zeit | Sprechtext | Bild |
+|---|---|---|
+| 0–8 | Mathe 1 Klausuraufgabe. Gegeben sind f und g. Gesucht … | Die Karte steht mittig, gleitet hoch, Chips a b c. |
+| 8,8–12,8 | Teil a. f nach g heißt: erst g, dann f. | (f∘g)(x) = f(g(x)), unter g „1.“, unter f „2.“. |
+| 12,6–18,6 | Probieren wir minus eins … Das gibt fünf. | (f∘g)(−1) = f(g(−1)). Nebenrechnung g(−1) = (−1)² = 1, daraus f(1). Dann f(1) = 2·1 + 3 = 5, daraus (f∘g)(−1) = 5. |
+| 19,2–25,5 | Allgemein liefert g x², und f macht daraus 2x² + 3. | g(x) = x², f(g(x)) wird zu f(x²). Die Regel f(x) = 2x + 3 wird zu f(x²) = 2x² + 3. Ergebnis unterstrichen. |
+| 25,6–34,6 | g nach f … Quadriert bleibt das eins. | (g∘f)(x) = g(f(x)) mit „1./2.“. (g∘f)(−1): f(−1) = 2·(−1) + 3 → −2 + 3 → 1, dann g(1) = 1² = 1. |
+| 35,1–39,2 | Allgemein liefert f 2x + 3, und g quadriert das Ganze. | f(x) = 2x + 3, also g(2x+3). Die Regel g(x) = x² wird zu g(2x+3) = (2x+3)². |
+| 40,2–44,6 | Jeder mit jedem multipliziert … | (2x+3)² = (2x+3)·(2x+3). Vier Bögen ergeben 4x², 6x, 6x, 9, daraus 4x² + 12x + 9. Ergebnis unterstrichen. |
+| 45,3–48,9 | Einmal fünf, einmal eins: Die Reihenfolge ändert das Ergebnis. | 5 und 1 werden koralle, darunter f∘g ≠ g∘f. |
+| 50,1–62,6 | Teil b. Bei f nach g … Sie ist auch nicht surjektiv. | Graph 2x² + 3. Gerechnet: (f∘g)(1) = 2·1² + 3 = 5, also (f∘g)(−1) = (f∘g)(1) = 5. Zwei Lote auf die 5. Dann x² ≥ 0, also 2x² + 3 ≥ 3, darunter koralle „nie unter 3“. |
+| 62,9–74,7 | Genauso bei g nach f … keine von beiden bijektiv. | Graph (2x+3)². Gerechnet: (g∘f)(−2) = (2·(−2)+3)² = (−1)² = 1. Lote von −2 und −1 auf die 1. (2x+3)² ≥ 0, darunter „nie negativ“. |
+| 75,7–81,7 | Teil c. f ist eine Gerade mit Steigung zwei … umkehrbar. | Gerade f mit Steigungsdreieck 1/2. Eine Waagrechte hat immer genau einen Schnittpunkt. |
+| 82,2–89,3 | Wir lösen nach x auf … | y = 2x + 3 │−3 → y − 3 = 2x │:2 → (y−3)/2 = x → f⁻¹(x) = (x−3)/2, unterstrichen. |
+| 90,2–95,8 | Mehr davon? … | Zusammenfassung, dann CTA. |
+
+## v1 (abgelehnt)
 
 ## Format
 

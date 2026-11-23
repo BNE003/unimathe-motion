@@ -91,7 +91,7 @@ export type MState = {
 const isFrac = (n: Node): n is Frac => (n as Frac).num !== undefined;
 
 // Abstand um Operatoren (KaTeX setzt bei einzeln stehenden Zeichen keinen Zwischenraum)
-const PAD: Record<string, number> = {'=': 0.32, '-': 0.24, '+': 0.24, '\\cdot': 0.12, '\\Rightarrow': 0.36, '\\Leftrightarrow': 0.36, ',': 0.16, '\\neq': 0.3, '\\mapsto': 0.3, '\\to': 0.3};
+const PAD: Record<string, number> = {'=': 0.32, '-': 0.24, '+': 0.24, '\\cdot': 0.12, '\\Rightarrow': 0.36, '\\Leftrightarrow': 0.36, ',': 0.16, '\\neq': 0.3, '\\mapsto': 0.3, '\\to': 0.3, '\\le': 0.3, '\\ge': 0.3};
 const FRAC_K = 0.9; // Schriftgröße in Zähler und Nenner
 const atomW = (a: Atom, size: number) => texW(a.tex, size) + 2 * size * (a.pad ?? PAD[a.tex] ?? 0.02);
 

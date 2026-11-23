@@ -1,4 +1,4 @@
-// Die Funktionen der Aufgabe und ihre Verkettungen. Alle Zahlen im Video (Maschinen, Graph, Gegenbeispiele) kommen von hier.
+// Die Funktionen der Aufgabe und ihre Verkettungen. Alle Zahlen im Video (Rechnungen mit −1, Graph, Gegenbeispiele) kommen von hier.
 // Beim Laden prüfen Assertions die Mathematik; ein Fehler bricht das Rendern ab.
 
 export const f = (x: number) => 2 * x + 3;
@@ -25,8 +25,12 @@ for (let x = -6; x <= 6; x += 0.05) {
 check(fg(0) === 3 && gf(-1.5) === 0, 'Scheitel');
 check(fg(-1) === 5 && fg(1) === 5, 'Gegenbeispiel f∘g');
 check(gf(-1) === 1 && gf(-2) === 1, 'Gegenbeispiel g∘f');
-check(g(X0) === 1 && f(g(X0)) === 5 && f(X0) === 1 && g(f(X0)) === 1, 'Maschinen mit −1');
-check(2 * X0 === -2 && 2 * X0 + 3 === 1 && 1 - 3 === -2 && -2 / 2 === X0 && fInv(1) === X0, 'Maschine von f mit −1');
+check(g(X0) === (-1) ** 2 && g(X0) === 1 && f(1) === 2 * 1 + 3 && f(g(X0)) === 5, '(f∘g)(−1): g(−1) = 1, f(1) = 5');
+check(f(X0) === -2 + 3 && f(X0) === 1 && g(1) === 1 ** 2 && g(f(X0)) === 1, '(g∘f)(−1): f(−1) = 1, g(1) = 1');
+// Ausmultiplizieren (2x + 3)·(2x + 3): die vier Produkte
+for (let x = -4; x <= 4; x += 0.25) check(near((2 * x) * (2 * x) + 2 * x * 3 + 3 * (2 * x) + 3 * 3, 4 * x * x + 12 * x + 9), 'jeder mit jedem');
+check(fg(1) === 2 * 1 ** 2 + 3 && (2 * -2 + 3) ** 2 === (-1) ** 2 && gf(-2) === 1, 'Werte in Teil b');
+check(fInv(1) === (1 - 3) / 2 && fInv(1) === X0, 'Probe f⁻¹(1) = −1');
 
 // Zahl als TeX mit echtem Minus
 export const num = (v: number) => (v < 0 ? `-${Math.abs(v)}` : `${v}`).replace('.', '{,}');

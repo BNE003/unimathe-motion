@@ -7,15 +7,15 @@ import path from 'node:path';
 const SR = 48000;
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 // Zeiten im Video, aus src/vk/timeline.ts (bei geänderter Timeline neu eintragen)
-const TOTAL = 96.5; // Videolänge
-const NULL1 = 2.08; // Karte gleitet hoch
-const WARUM = 9.19; // Teil a
-const STELL = 13.09; // erste Maschine
-const NULL2 = 35.51; // f∘g ≠ g∘f
-const FORMEL = 49.4; // Teil b
-const NULL3 = 74.82; // f bijektiv
-const ORTHO = 74.82; // ab hier Dur
-const CTA = 91.67; // CTA
+const TOTAL = 97.1; // Videolänge
+const NULL1 = 2.14; // Karte gleitet hoch
+const WARUM = 8.75; // Teil a
+const STELL = 12.57; // Rechnung mit −1
+const NULL2 = 47.58; // f∘g ≠ g∘f
+const FORMEL = 50.56; // Teil b
+const NULL3 = 80.98; // f umkehrbar
+const ORTHO = 80.98; // ab hier Dur
+const CTA = 93.6; // CTA
 const n = Math.ceil(TOTAL * SR);
 const L = new Float32Array(n);
 const R = new Float32Array(n);

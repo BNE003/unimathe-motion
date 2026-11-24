@@ -1,7 +1,7 @@
 # Storyboard: Banach-Tarski (Aha-Video)
 
-Status: Konzept freigegeben am 2026-11-23. v1 (50,1 s) mit Feedback; v2 gebaut in `src/bt/` (70,5 s). Branch `video/banach-tarski`.
-Stimme: Chris, eleven_v4. Take 1 (bt-take1.mp3, 739 Credits) und Take 2 (bt-take2.mp3, 606 Credits) mit neuem Hook, Baumaufbau und Brücke zur Kugel, im Wechsel eingeschnitten (VOICES/src in timeline.ts).
+Status: Konzept freigegeben am 2026-11-23. v1 (50,1 s) mit Feedback; v2 (70,5 s) abgenommen; v3 nach Feedback gebaut in `src/bt/` (80,9 s). Branch `video/banach-tarski`.
+Stimme: Chris, eleven_v4. Take 1 (bt-take1.mp3, 739 Credits) und Take 2 (bt-take2.mp3, 606 Credits) mit neuem Hook, Baumaufbau und Brücke zur Kugel, im Wechsel eingeschnitten (VOICES/src in timeline.ts). Take 3 (bt-take3.mp3, 388 Credits): Hook mit „genauso groß“, Sortieren nach Ästen, neuer Haken-Satz, neues CTA.
 
 Format: 9:16, 1080 × 1920, 60 fps, Deutsch.
 
@@ -41,6 +41,23 @@ Umsetzung in v2:
   - Achse 1 (rechts/links) und Achse 2 (oben/unten) mit echten Drehwegen vom Startpunkt.
   - Die Bahn wächst synchron.
   - „Ast verschieben = Kugel drehen“: Die Kugel dreht um a, und gleichzeitig rückt der Ast im kleinen Baum.
+
+## v3 nach Feedback (2026-11-23)
+
+Feedback zu v2:
+- Hook um „Und beide sind genauso groß wie die ursprüngliche Kugel.“ ergänzen.
+- „Die Teile werden zu Staub“ ist unverständlich, auch Ersatzbilder wie „Brocken“ oder „verstreute Punkte“.
+- „Mehr Mathe? … UniMathe“ sagt zweimal Mathe.
+- Die Pause nach „um diese Achse“ ist zu lang.
+
+Umsetzung in v3:
+- Hook: Die Radiusmarken r erscheinen bei „genauso groß“.
+- Statt Staub: „Jetzt sortieren wir jeden Punkt nach seinem Ast: rechts, links, oben, unten oder Startpunkt. Das sind die fünf Teile.“
+  - Die Kugel steht als weiße Punktwolke da und färbt sich Wort für Wort in den Astfarben.
+  - Darunter eine Wortleiste in den Farben, dazu die Zeile „5 Teile“.
+- Haken: „Diese Teile sind so seltsam, dass man ihr Volumen nicht messen kann.“
+- CTA: „Lust auf mehr Aha-Momente? Such im App Store nach UniMathe.“
+- Die Pause nach „um diese Achse“ ist von 1,3 s auf 0,3 s gekürzt, nach „um diese“ von 1,3 s auf 1,0 s.
 
 ## Szenen v1 (Zeiten im v1-Video; v2 siehe oben und src/bt/timeline.ts)
 

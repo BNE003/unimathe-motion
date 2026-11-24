@@ -25,6 +25,8 @@ import {
   INSET_C,
   insetScreen,
   insetVis,
+  sortFlash,
+  sortTint,
   oneBall,
   orbitGrow,
   orbitLock,
@@ -179,6 +181,14 @@ const ball = (ctx: Ctx, cam: Cam, c: V3, a: number, style: BallStyle, t: number)
 
 /* ---------- Staub ---------- */
 
+const hexRgb = (h: string) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+const tint = (from: string, to: string, k: number) => {
+  if (k >= 1) return to;
+  const a = hexRgb(from);
+  const b = hexRgb(to);
+  return `rgb(${a.map((v, i) => Math.round(lerp(v, b[i], k))).join(',')})`;
+};
+
 const dust = (ctx: Ctx, cam: Cam, t: number, st: number) => {
   const pts: {p: V2; d: number; a: number; col: string; r: number}[] = [];
   for (const d of DUST) {
@@ -187,7 +197,8 @@ const dust = (ctx: Ctx, cam: Cam, t: number, st: number) => {
     const q = dustPos(d, t);
     const dep = cam.depth(q);
     if (dep < 0.4) continue;
-    pts.push({p: cam.p(q), d: dep, a, col: PART[d.k], r: Math.min(5.5, 0.019 * cam.scale(q))});
+    const f = sortFlash(d.k, t);
+    pts.push({p: cam.p(q), d: dep, a: Math.min(1, a * (1 + 0.6 * f)), col: tint(PART[4], PART[d.k], sortTint(d.k, t)), r: Math.min(5.5, 0.019 * cam.scale(q)) * (1 + 0.35 * f)});
   }
   if (!pts.length) return;
   pts.sort((x, y) => y.d - x.d);

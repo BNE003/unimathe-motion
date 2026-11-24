@@ -70,7 +70,7 @@ const At: React.FC<{t: number; q: V3; dx?: number; dy?: number; o: number; child
 
 const Labels: React.FC = () => {
   const t = useSec();
-  const r = show(t, T.ohneHinzu + 0.2, 0.4) * hide(t, T.wie, 0.35);
+  const r = show(t, T.gross, 0.4) * hide(t, T.wie, 0.35);
   return (
     <AbsoluteFill>
       {[LEFT, RIGHT].map((c, i) => (
@@ -112,11 +112,40 @@ const TreeText: React.FC = () => {
   );
 };
 
+/* ---------- Sortieren nach Ästen: die fünf Wörter in ihren Farben ---------- */
+
+const SORT_WORDS: [string, number][] = [
+  ['rechts', 0],
+  ['links', 1],
+  ['oben', 2],
+  ['unten', 3],
+  ['Startpunkt', 4],
+];
+const SortLegend: React.FC = () => {
+  const t = useSec();
+  const o = show(t, T.sortA - 0.1, 0.3) * hide(t, T.drehen, 0.4);
+  if (o <= 0.01) return null;
+  const at = [T.sortA, T.sortAi, T.sortB, T.sortBi, T.sortE];
+  return (
+    <div style={{position: 'absolute', left: 540, top: 1296, transform: 'translate(-50%, -50%)', opacity: o, display: 'flex', gap: 30, fontFamily: F.display, fontWeight: 700, fontSize: 40, whiteSpace: 'nowrap', textShadow: shadow}}>
+      {SORT_WORDS.map(([w, k]) => {
+        const s = show(t, at[k] - 0.08, 0.3);
+        const p = bump(t, at[k], 0.6);
+        return (
+          <span key={w} style={{color: PART[k], opacity: 0.15 + 0.85 * s, transform: `scale(${1 + 0.15 * p})`, display: 'inline-block', textShadow: glowOf(PART[k], p)}}>
+            {w}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
 /* ---------- Hinweis „symbolisch“ ---------- */
 
 const Note: React.FC = () => {
   const t = useSec();
-  const o = show(t, T.staub, 0.5) * hide(t, T.gold - 0.2, 0.4);
+  const o = show(t, T.teile, 0.5) * hide(t, T.gold - 0.2, 0.4);
   if (o <= 0.01) return null;
   return (
     <div style={{position: 'absolute', left: 540, top: 1392, transform: 'translate(-50%, -50%)', opacity: o * 0.85, fontFamily: F.mono, fontSize: 24, color: C.txt2, textShadow: shadow, whiteSpace: 'nowrap'}}>
@@ -283,7 +312,8 @@ const SFX: [number, string, number][] = [
   [LOCK, 'lock_hi', 0.45],
   [T.waehlt + 0.3, 'tick', 0.32],
   [T.axiom, 'accent_small', 0.4],
-  [T.staub, 'collapse', 0.35],
+  [T.staub, 'collapse', 0.3],
+  ...[T.sortA, T.sortAi, T.sortB, T.sortBi, T.sortE].map((at) => [at, 'tick', 0.28] as [number, string, number]),
   [T.drehen, 'rise', 0.3],
   [T.zweiK + 0.1, 'lock_hi', 0.5],
   [T.zweiK + 0.12, 'accent', 0.42],
@@ -321,6 +351,10 @@ export const VideoBT: React.FC<BTProps> = ({music, voice}) => {
       </Line>
       <Line from={T.axiom - 0.1} to={T.staub + 0.3} pulseAt={T.axiom} color={PART[0]}>
         Auswahlaxiom
+      </Line>
+      <SortLegend />
+      <Line from={T.teile - 0.05} to={T.zweiK - 0.15} pulseAt={T.teile}>
+        5 Teile
       </Line>
       <Line from={T.zweiK} to={T.haken - 0.1} pulseAt={T.zweiK + 0.1} color={PART[1]}>
         2 Kugeln

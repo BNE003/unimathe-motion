@@ -120,6 +120,10 @@ export const dustAlpha = (d: (typeof DUST)[number], t: number): number => {
   if (t >= T.haken) a = (d.k === 1 ? prog(t, T.haken + 0.1, 0.5) : 0) * (1 - prog(t, T.gold - 0.2, 0.5));
   return a;
 };
+// Sortieren nach Ästen: erst weiße Punktwolke, dann färbt sich jede Klasse bei ihrem Wort (rechts, links, oben, unten, Startpunkt)
+export const SORT_AT = (k: Cls) => [T.sortA, T.sortAi, T.sortB, T.sortBi, T.sortE][k];
+export const sortTint = (k: Cls, t: number) => (t < T.staub - 0.5 ? 1 : prog(t, SORT_AT(k) - 0.05, 0.35));
+export const sortFlash = (k: Cls, t: number) => (t < T.staub - 0.5 ? 0 : Math.max(0, Math.sin(Math.PI * clamp((t - SORT_AT(k) + 0.05) / 0.7))));
 export const dustInVolume = (t: number) => t >= T.haken;
 // im Volumen-Teil: der a⁻¹-Staub liegt in der linken Kugel an seiner Endlage
 export const volumePos = (d: (typeof DUST)[number]): V3 => add(LEFT, rotAxis(AXIS.a, ANGLE, d.h));
@@ -131,7 +135,7 @@ export const twoBallsHook = (t: number) => prog(t, T.zweiKugeln - 0.15, 0.6) * (
 export const sphereGlass = (t: number) => prog(t, T.kugel - 0.5, 0.6) * (1 - prog(t, T.staub - 0.2, 0.6));
 export const twoBallsBuild = (t: number) => prog(t, T.zweiK - 0.2, 0.6) * (1 - prog(t, T.haken, 0.6));
 export const goldBall = (t: number) => prog(t, T.gold - 0.1, 0.6) * (1 - prog(t, T.cta - 0.2, 0.5));
-export const radiusMarks = (t: number) => prog(t, T.ohneHinzu, 0.4) * (1 - prog(t, T.wie, 0.4));
+export const radiusMarks = (t: number) => prog(t, T.gross, 0.4) * (1 - prog(t, T.wie, 0.4));
 export const floorVis = (t: number) => (1 - prog(t, T.wie, 0.5)) * 1 + prog(t, T.staub, 0.8) * (1 - prog(t, T.cta - 0.2, 0.5));
 export const stageVis = (t: number) => chain(t, 1, [[T.cta - 0.1, 0.8, 0.09]]);
 

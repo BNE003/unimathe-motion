@@ -6,15 +6,15 @@ import path from 'node:path';
 const SR = 48000;
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 // Zeiten im Video, aus src/bt/timeline.ts (bei geänderter Timeline neu eintragen)
-const TOTAL = 70.5; // Videolänge
-const NULL1 = 4.43; // zwei Kugeln im Hook
-const WARUM = 10.11; // „Wie geht das?“
-const STELL = 11.17; // Baum
-const NULL2 = 25.71; // Ast rastet ein
-const FORMEL = 34.08; // Kugel
-const NULL3 = 59.4; // zwei Kugeln (Aufbau)
-const ORTHO = 64.86; // „Mit echtem Gold“: ab hier Dur
-const CTA = 67.1; // CTA
+const TOTAL = 80.9; // Videolänge
+const NULL1 = 4.29; // zwei Kugeln im Hook
+const WARUM = 13.33; // „Wie geht das?“
+const STELL = 14.39; // Baum
+const NULL2 = 28.93; // Ast rastet ein
+const FORMEL = 37.3; // Kugel
+const NULL3 = 67.58; // zwei Kugeln (Aufbau)
+const ORTHO = 74.22; // „Mit echtem Gold“: ab hier Dur
+const CTA = 76.46; // CTA
 const n = Math.ceil(TOTAL * SR);
 const L = new Float32Array(n);
 const R = new Float32Array(n);
